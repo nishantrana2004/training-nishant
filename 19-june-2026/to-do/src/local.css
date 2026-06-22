@@ -1,69 +1,156 @@
-.local-container{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f2f2f2;
-    }
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
 
-  .local-card {
+.crud {
     width: 250px;
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px gray;
-    }
+  }
 
-  .local-heading {
+.heading {
     text-align: center;
     margin-bottom: 10px;
-    fontSize: '14px'
-  },
+    font-size: 18px;
+  }
 
-  .local-dayBox {
-    background-color: #6a1b9a;
+.dayBox {
+    background-color: purple;
     color: white;
     text-align: center;
     padding: 8px;
     margin-bottom: 15px;
-    border-radius: 3px;
-    }
+    border-radius: 5px;
+  }
 
-  .local-inputBox {
+.inputMain {
     display: flex;
-    gap: 5px;
-  },
+    gap : 5px;
+  }
 
-  .local-input {
+  .input{
     flex: 1;
     padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  },
+  }
 
-  .local-button: {
-    background-color: #6a1b9a;
+  .button {
+    background-color: black;
     color: white;
     border: none;
+    border-radius: 5px;
     padding: 5px 10px;
     cursor: pointer;
+  }
+  .taskItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #eee;
+    padding: 8px;
     border-radius: 3px;
-  },
+  }
+  .editBtn {
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+  }
 
-  .locall-taskItem {
+  .deleteBtn {
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    padding: 5px;
+  }
+.item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 10px;
   background-color: #eee;
-  padding: 5px;
+  padding: 8px;
   border-radius: 3px;
 }
 
-.locall-deleteBtn {
-  background-color: red;
-  color: white;
-  border: none;
+
+.listContainer {
+  margin-top: 20px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.taskLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Default Gol Circle (Incomplete state) */
+.circleMarker {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background-color: transparent;
   cursor: pointer;
-  padding: 5px 8px;
-  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+/* Complete hone par green circle */
+.completedCircle {
+  border-color: #28a745;
+  background-color: #28a745;
+}
+
+/* Circle ke andar ka Tick mark */
+.tickMark {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+/* Default Task text */
+.taskText {
+  font-size: 16px;
+  color: #333;
+  transition: all 0.2s ease;
+}
+
+/* Complete hone par text cut-out ho jayega */
+.completedText {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.taskActions {
+  display: flex;
+  gap: 5px;
+}
+
+/* Completed task par edit button hide/fade karne ke liye */
+.disabledBtn {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
